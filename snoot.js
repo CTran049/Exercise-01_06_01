@@ -205,8 +205,7 @@ function validatePayment() {
         if (ccNumElement.value === "") {
             ccNumElement.style.background = "rgb(255,233,233)";
             formValidity = false;
-        }
-        else {
+        } else {
             ccNumElement.style.background = "white";
         }
         // validate expiration date
@@ -226,8 +225,7 @@ function validatePayment() {
         if (cvvElement.value === "") {
             cvvElement.style.background = "rgb(255,233,233)";
             formValidity = false;
-        }
-        else {
+        } else {
             cvvElement.style.background = "white";
         }
         // action for invalid fieldset
@@ -253,8 +251,7 @@ function validateMessage() {
         // validate checkbox and textarea custom message
         if (document.getElementById("custom").checked && (msgBox.value === "" || msgBox.value === msgBox.placeholder)) {
             throw "Please enter your Custom Message text.";
-        }
-        else {
+        } else {
             errorDiv.style.display = "none";
             errorDiv.innerHTML = "";
             msgBox.style.background = "white";
@@ -287,12 +284,10 @@ function validateCreateAccount() {
                 passwordMismatch = true;
                 throw "Passwords entered do not match, please re-enter.";
             }
-        }
-        else if (usernameElement.value === "" && pass1Element.value === "" && pass2Element.value === "") { // no fields have data
+        } else if (usernameElement.value === "" && pass1Element.value === "" && pass2Element.value === "") { // no fields have data
             fieldsetValidity = true;
             passwordMismatch = false;
-        }
-        else {
+        } else {
             fieldsetValidity = false;
             throw "Please enter all fields to Create Account.";
         }
@@ -304,8 +299,7 @@ function validateCreateAccount() {
         formValidity = false;
         if (passwordMismatch) {
             usernameElement.style.background = "white";
-        }
-        else {
+        } else {
             usernameElement.style.background = invColor;
         }
     }
